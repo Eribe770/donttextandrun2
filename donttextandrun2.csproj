@@ -81,6 +81,9 @@
     <Compile Include="Assets\Colliding.cs" />
     <Compile Include="Assets\Collision.cs" />
     <Compile Include="Assets\Countdown.cs" />
+    <Compile Include="Assets\Scripts\phone\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\phone\PhoneScript.cs" />
+    <Compile Include="Assets\Scripts\phone\PlayerScript.cs" />
     <Compile Include="Assets\Walking.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

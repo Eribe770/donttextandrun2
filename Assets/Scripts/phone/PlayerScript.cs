@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour {
 
     public GameObject camera;
     public GameObject phone;
+    public GameObject markerSphere;
     public float animationSpeed = 1.0f;
     private Quaternion phoneLookAt;
     private Quaternion worldLookAt;
@@ -22,8 +23,10 @@ public class PlayerScript : MonoBehaviour {
     public Vector3 phonePosition;
     public States state;
 
-	// Use this for initialization
-	void Start ()
+    public float movePhoneDistance = 1.0f;
+
+    // Use this for initialization
+    void Start ()
     {
         state = States.world;
 
@@ -35,8 +38,9 @@ public class PlayerScript : MonoBehaviour {
         //phoneLookAt = Quaternion.AngleAxis(45f, camera.transform.right);
 
         worldPosition = phone.transform.localPosition;
-        //Vector3.MoveTowards
-        phonePosition = new Vector3(0, 0.298f, 0.2f);
+        phonePosition = markerSphere.transform.localPosition;
+        //phonePosition = Vector3.MoveTowards(phone.transform.localPosition, camera.transform.localPosition, movePhoneDistance);
+        //phonePosition = new Vector3(0, 0.298f, 0.2f);
 
     }
 

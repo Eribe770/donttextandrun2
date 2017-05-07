@@ -78,7 +78,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Level\Colliding.cs" />
     <Compile Include="Assets\Scripts\Level\Collision.cs" />
     <Compile Include="Assets\Scripts\Level\Countdown.cs" />
@@ -87,15 +86,6 @@
     <Compile Include="Assets\Scripts\phone\CameraScript.cs" />
     <Compile Include="Assets\Scripts\phone\PhoneScript.cs" />
     <Compile Include="Assets\Scripts\phone\PlayerScript.cs" />
-=======
-    <Compile Include="Assets\Colliding.cs" />
-    <Compile Include="Assets\Collision.cs" />
-    <Compile Include="Assets\Countdown.cs" />
-    <Compile Include="Assets\Scripts\phone\CameraScript.cs" />
-    <Compile Include="Assets\Scripts\phone\PhoneScript.cs" />
-    <Compile Include="Assets\Scripts\phone\PlayerScript.cs" />
-    <Compile Include="Assets\Walking.cs" />
->>>>>>> 3a08d3cc3f6cf4425cf79370a95120fbb0d421bf
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

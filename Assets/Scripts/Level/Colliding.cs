@@ -5,6 +5,7 @@ using UnityEngine;
 public class Colliding : MonoBehaviour {
     private Rigidbody rb;
     private float StunCounter;
+    private float SlowCounter;
     public float StunDuration;
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,15 @@ public class Colliding : MonoBehaviour {
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "TripObject")
+        {
+            GetComponent<Walking>().Slowed = true;
+            SlowCounter = StunDuration;
+            other.tag = "InactiveObject";
+        }
+    }
     // Update is called once per frame
     void Update () {
 		
@@ -38,5 +48,14 @@ public class Colliding : MonoBehaviour {
                 GetComponent<Walking>().Stunned = false;
             }
          }
+        if(GetComponent<Walking>().Slowed == true)
+        {
+            SlowCounter -= Time.fixedDeltaTime;
+
+            if(SlowCounter <= 0)
+            {
+                GetComponent<Walking>().Slowed = false;
+            }
+        }
     }
 }

@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour {
         worldLookAt = new Quaternion();
 
         worldLookAt = Quaternion.Euler(0, 0, 0);
-        phoneLookAt = Quaternion.Euler(+45, 0, 0);
+        phoneLookAt = Quaternion.Euler(+60, 0, 0);
         //phoneLookAt = Quaternion.AngleAxis(45f, camera.transform.right);
 
         worldPosition = phone.transform.localPosition;
@@ -91,6 +91,7 @@ public class PlayerScript : MonoBehaviour {
                 if (t >= 1)
                 {
                     state = States.phone;
+                    BroadcastMessage("StatePhone");
                     transitioning = false;
                 }
 
@@ -104,6 +105,7 @@ public class PlayerScript : MonoBehaviour {
                 if (t >= 1)
                 {
                     state = States.world;
+                    BroadcastMessage("StateWorld");
                     transitioning = false;
                 }
 

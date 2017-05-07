@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class Timer : MonoBehaviour
         else
         {
             GUI.Label(new Rect(00, 00, 200, 100), "Time's Up");
+
+            SceneManager.LoadScene("Scene1");
         }
     }
 }

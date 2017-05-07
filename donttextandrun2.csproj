@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Level\Colliding.cs" />
     <Compile Include="Assets\Scripts\Level\Collision.cs" />
     <Compile Include="Assets\Scripts\Level\Countdown.cs" />
+    <Compile Include="Assets\Scripts\Level\OpenDoor.cs" />
     <Compile Include="Assets\Scripts\Level\Timer.cs" />
     <Compile Include="Assets\Scripts\Level\Walking.cs" />
     <Compile Include="Assets\Scripts\phone\CameraScript.cs" />

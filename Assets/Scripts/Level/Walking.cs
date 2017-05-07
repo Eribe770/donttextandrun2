@@ -10,6 +10,7 @@ public class Walking : MonoBehaviour {
     public float RotationSpeed;
     [System.NonSerialized]
     public bool Stunned;
+    public bool Slowed;
     
     // Use this for initialization
 	void Start () {
@@ -45,7 +46,10 @@ public class Walking : MonoBehaviour {
                 rb.MoveRotation(rb.rotation * deltaRotation);
             }
         }
-
+        if (Slowed)
+        {
+            velocity *= 0.5f;
+        }
         var direction = tf.forward * velocity;
         rb.velocity = direction;
     }

@@ -24,10 +24,14 @@ public class PlayerScript : MonoBehaviour {
     public States state;
 
     public float movePhoneDistance = 1.0f;
+    private float socialPoints;
 
     // Use this for initialization
     void Start ()
     {
+
+        socialPoints = 0;
+
         state = States.world;
 
         phoneLookAt = new Quaternion();
@@ -46,6 +50,11 @@ public class PlayerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        if (state == States.phone)
+        {
+            socialPoints += Time.deltaTime;
+        }
 
         // Key input stuff
 		if (Input.GetKeyDown(KeyCode.Space) && !transitioning)
